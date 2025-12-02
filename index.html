@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday for Couples</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #ff1493); /* Gradien hitam ke pink */
+            color: #ffffff;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 20, 147, 0.1); /* Transparan pink */
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.5); /* Glow effect */
+            animation: fadeIn 1s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 {
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff1493; /* Neon glow */
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+            width: 80%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            background: #ff1493;
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #ff69b4;
+            box-shadow: 0 0 10px #ff1493;
+        }
+        /* Dekorasi untuk slide 2, 3, 4, dan 5 */
+        .decorations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            font-size: 2em;
+            color: #ff1493;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background: radial-gradient(circle, #ff69b4, #ff1493);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Welcome and Name Input -->
+        <div id="slide1" class="slide active">
+            <h1>Selamat Datang!</h1>
+            <p>Halo cantik, masukkan nama lengkapnya yaaww!!</p>
+            <input type="text" id="birthdayName" placeholder="Masukkan nama" />
+            <button onclick="nextSlide(2)">Next</button>
+        </div>
+
+        <!-- Slide 2: Long Birthday Wishes with Decorations -->
+        <div id="slide2" class="slide">
+            <div class="decorations">
+                <div class="star" style="top: 10%; left: 10%;">⭐</div>
+                <div class="star" style="top: 20%; right: 15%;">✨</div>
+                <div class="star" style="bottom: 15%; left: 20%;">⭐</div>
+                <div class="star" style="bottom: 10%; right: 10%;">✨</div>
+                <div class="balloon" style="top: 5%; left: 5%;"></div>
+                <div class="balloon" style="top: 10%; right: 5%;"></div>
+            </div>
+            <h2 id="birthdayTitle">Selamat Ulang Tahun sayangg</h2>
+            <p id="wishesText">
+                Pada hari spesial ini, aku ingin mengucapkan selamat bertambah umur sayangku. Semoga tahun ini membawa kebahagiaan yang tak terhingga, dan harapan yang semakin baik kedepannya.
+                Semoga bebe sehat selalu, panjang umurnya, berbakti sama orang tua, dan selalu jadi yang terbaik untuk semua orang. Semoga mimpi kamu bisa terwujud ya sayang!!, dan tantangan terlewati dengan mudah.
+                Happy Birthday, my love!
+            </p>
+            <button onclick="nextSlide(3)">Next</button>
+        </div>
+
+        <!-- Slide 3: First Part of Future Hopes with Decorations -->
+        <div id="slide3" class="slide">
+            <div class="decorations">
+                <div class="star" style="top: 15%; left: 15%;">⭐</div>
+                <div class="star" style="top: 25%; right: 20%;">✨</div>
+                <div class="star" style="bottom: 20%; left: 25%;">⭐</div>
+                <div class="star" style="bottom: 15%; right: 15%;">✨</div>
+                <div class="balloon" style="top: 8%; left: 8%;"></div>
+                <div class="balloon" style="top: 12%; right: 8%;"></div>
+            </div>
+            <p id="hopesText1">
+                Untuk kesayangkuuu, semoga tahun-tahun mendatang menjadi hal yang indah buat kamu. 
+                Aku berharap kita bisa terus bersama sampai kapanpun itu, 
+                dan membangun kenangan yang tak terlupakan.
+            </p>
+            <button onclick="nextSlide(4)">Next</button>
+        </div>
+
+        <!-- Slide 4: Second Part of Future Hopes with Decorations -->
+        <div id="slide4" class="slide">
+            <div class="decorations">
+                <div class="star" style="top: 10%; left: 10%;">⭐</div>
+                <div class="star" style="top: 20%; right: 15%;">✨</div>
+                <div class="star" style="bottom: 15%; left: 20%;">⭐</div>
+                <div class="star" style="bottom: 10%; right: 10%;">✨</div>
+                <div class="balloon" style="top: 5%; left: 5%;"></div>
+                <div class="balloon" style="top: 10%; right: 5%;"></div>
+            </div>
+            <p id="hopesText2">
+                Semoga kita saling mendukung dalam setiap langkah kita. dan hubungan kita selalu harmonis, 
+                penuh tawa, dan saling menjaga satu sama lain.
+            </p>
+            <button onclick="nextSlide(5)">Next</button>
+        </div>
+
+        <!-- Slide 5: Third Part of Future Hopes with Decorations (Final Slide) -->
+        <div id="slide5" class="slide">
+            <div class="decorations">
+                <div class="star" style="top: 15%; left: 15%;">⭐</div>
+                <div class="star" style="top: 25%; right: 20%;">✨</div>
+                <div class="star" style="bottom: 20%; left: 25%;">⭐</div>
+                <div class="star" style="bottom: 15%; right: 15%;">✨</div>
+                <div class="balloon" style="top: 8%; left: 8%;"></div>
+                <div class="balloon" style="top: 12%; right: 8%;"></div>
+            </div>
+            <h2>Terus semangat yaa!!</h2>
+            <p id="hopesText3">
+                Truss semangatt yaa sayanggg jangan pernah menyerah untuk sesuatu hal,
+                selalu ada aku disini buat kamu jangan pernah merasa sendirii yaa!!
+                Happy nice day sayanggg!.
+            </p>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+
+    <script>
+        let birthdayName = '';
+
+        function nextSlide(slideNumber) {
+            if (slideNumber === 2) {
+                birthdayName = document.getElementById('birthdayName').value.trim() || 'Sayang';
+                // Personalisasi title
+                document.getElementById('birthdayTitle').innerText = `Selamat Ulang Tahun, ${birthdayName}!!!`;
+                // Personalisasi wishesText (ganti placeholder dengan nama)
+                let wishesText = `Pada hari spesial ini, aku ingin mengucapkan selamat bertambah umur ${birthdayName}. Semoga tahun ini membawa kebahagiaan yang tak terhingga, dan harapan yang semakin baik kedepannya.
+                Semoga ${birthdayName} sehat selalu, panjang umurnya, berbakti sama orang tua, dan selalu jadi yang terbaik untuk semua orang. Semoga mimpi kamu bisa terwujud ya ${birthdayName}!!, dan tantangan terlewati dengan mudah.
+                Happy Birthday, my love!`;
+                document.getElementById('wishesText').innerText = wishesText;
+            }
+            if (slideNumber === 3) {
+                // Personalisasi hopesText1
+                let hopesText1 = `Untuk ${birthdayName}, semoga tahun-tahun mendatang menjadi hal yang indah buat kamu. 
+                Aku berharap kita bisa terus bersama sampai kapanpun itu, 
+                dan membangun kenangan yang tak terlupakan.`;
+                document.getElementById('hopesText1').innerText = hopesText1;
+            }
+            if (slideNumber === 4) {
+                // Personalisasi hopesText2
+                let hopesText2 = `Semoga kita saling mendukung dalam setiap langkah kita. dan hubungan kita selalu harmonis, 
+                penuh tawa, dan saling menjaga satu sama lain, ${birthdayName}.`;
+                document.getElementById('hopesText2').innerText = hopesText2;
+            }
+            if (slideNumber === 5) {
+                // Personalisasi hopesText3
+                let hopesText3 = `Truss semangatt yaa ${birthdayName} jangan pernah menyerah untuk sesuatu hal,
+                selalu ada aku disini buat kamu jangan pernah merasa sendirii yaa!!
+                Happy nice day ${birthdayName}!.`;
+                document.getElementById('hopesText3').innerText = hopesText3;
+            }
+            // Sembunyikan semua slide dan tampilkan yang aktif
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById('slide' + slideNumber).classList.add('active');
+        }
+
+        function restart() {
+            // Reset ke slide 1
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById('slide1').classList.add('active');
+            // Reset input
+            document.getElementById('birthdayName').value = '';
+            birthdayName = '';
+        }
+    </script>
+</body>
+</html>
